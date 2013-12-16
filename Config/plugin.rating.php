@@ -79,17 +79,17 @@ $config['Rating.maxRating'] = 5;
 /**
  * Location of the full star image.
  */
-$config['Rating.statFullClass'] = 'icon-rate';
+$config['Rating.statFullClass'] = 'irate-rate';
 
 /**
  * Location of the empty star image.
  */
-$config['Rating.statEmptyClass'] = 'icon-rate-empty';
+$config['Rating.statEmptyClass'] = 'irate-rate-empty';
 
 /**
  * Location of the half star image.
  */
-$config['Rating.statHalfClass'] = 'icon-rate-half-alt';
+$config['Rating.statHalfClass'] = 'irate-rate-half-alt';
 
 /**
  * Save the average rating and vote count to the rated model.

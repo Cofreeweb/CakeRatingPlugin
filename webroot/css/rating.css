@@ -22,15 +22,15 @@
 }
 */
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class^="irate-"]:before, [class*=" irate-"]:before {
   font-family: "rating";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
+	font-size: 150%;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
@@ -52,17 +52,18 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.icon-rate, .icon-rate-empty, .icon-rate-half-alt {
+.irate-rate, .irate-rate-empty, .irate-rate-half-alt {
   cursor: pointer;
 }
-.icon-rate:before { content: '\e804'; } /* '' */
-.icon-rate-empty:before { content: '\e803'; } /* '' */
-.icon-rate-half-alt:before { content: '\e801'; } /* '' */
+.irate-rate:before { content: '\e804'; color: #FF6600 } /* '' */
+.irate-rate-empty:before { content: '\e803'; color: #CCC} /* '' */
+.irate-rate-half-alt:before { content: '\e801'; } /* '' */
 
 
 div.rating {
-  font-size: 8pt;
+  font-size: 12px;
   white-space: nowrap;
+	margin: 15px 0;
 }
 
 div.rating-text {
