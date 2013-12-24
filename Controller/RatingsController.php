@@ -59,7 +59,7 @@ class RatingsController extends RatingAppController {
     // check if model id exists
     $modelInstance->id = $id;
     
-    if (Configure::read('Rating.showHelp') && !$modelInstance->exists(true)) {
+    if (Configure::read('Rating.showHelp') && !$modelInstance->exists(null)) {
       echo 'Error: The model_id "'.$id.'" of "'.$model.'" does not exist.';
     }
 
@@ -173,7 +173,7 @@ class RatingsController extends RatingAppController {
     $modelInstance = ClassRegistry::init($model);
     $modelInstance->id = $id;
     
-    if (!$modelInstance->exists(true)) {
+    if (!$modelInstance->exists(null)) {
       if (!$fallback) {
         $this->view($model, $id, base64_encode(json_encode(array('name' => $name, 'config' => $config))));
       } else {

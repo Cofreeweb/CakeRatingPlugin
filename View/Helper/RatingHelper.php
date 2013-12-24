@@ -15,6 +15,24 @@ class RatingHelper extends AppHelper
   
   private $_models = array();
   
+  
+  
+  public function beforeRender() 
+  {
+    if( !$this->request->is( 'ajax'))
+    {
+      $this->Html->css( '/rating/css/rating', null, array(
+          'inline' => false,
+          'once' => true
+      ));
+      
+      $this->Html->script( '/rating/js/rating_jquery', array(
+          'inline' => false,
+          'once' => true
+      ));
+    }
+  }
+  
 /**
  * Guess the location for a model based on its name and tries to create a new instance
  * or get an already created instance of the model
@@ -119,7 +137,7 @@ class RatingHelper extends AppHelper
     // check if model id exists
     $modelInstance->id = $id;
     
-    if( Configure::read('Rating.showHelp') && !$modelInstance->exists(true)) {
+    if( Configure::read('Rating.showHelp') && !$modelInstance->exists(null)) {
       echo 'Error: The model_id "'.$id.'" of "'.$model.'" does not exist.';
     }
 
@@ -308,6 +326,22 @@ class RatingHelper extends AppHelper
     }
     
     return $options;
+  }
+  
+  public function render( $options = array())
+  {
+    $_options = array(
+        'name' => 'default',
+        'config' => 'plugin.rating'
+    );
+    
+    $options = array_merge( $_options, $options);
+    
+    $out = '<div id="'. $options ['model'] .'_rating_'. $options ['id'] .'" class="rating">' .
+      $this->view( $options ['model'], $options ['id'], base64_encode(json_encode(array('name' => $options ['name'], 'config' => $options ['config'])))) .
+      '</div>';
+    
+    return $out;
   }
 }
 ?>
