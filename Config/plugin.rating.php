@@ -159,7 +159,7 @@ $config['Rating.showUserRatingMark'] = true;
  * %VOTES% Number of votes
  * %RATING% User rating
  */
-$config['Rating.statusText'] = '%AVG% / %MAX%  (%VOTES%)';
+$config['Rating.statusText'] = __( '%VOTES% voto(s)');
 
 /**
  * Show 'Rating.mouseOverMessages' on mouseover.
