@@ -152,7 +152,7 @@ class RatingsController extends RatingAppController {
     $saved = false;
     $fallback = false;
     $referer = Controller::referer();
-    
+
     $name = $this->request->query ['name'];
     $config = $this->request->query ['config'];
     
