@@ -132,7 +132,9 @@ class RatingsController extends RatingAppController {
     $this->set('id', $id);
     $this->set('model', $model);
     $this->set('options', $optionsData);
-    $this->set('data', array('%VOTES%' => $votes.' '.__n('', '', $votes, true), 
+    $this->set('data', array(
+                              // '%VOTES%' => $votes.' '.__n('', '', $votes, true), 
+                             '%VOTES%' => $votes, 
                              '%RATING%' => $userRating, 
                              '%AVG%' => $avgRating,
                              '%MAX%' => Configure::read('Rating.maxRating')));

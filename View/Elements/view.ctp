@@ -64,9 +64,9 @@
       echo $this->Form->hidden('name', array('value' => $options['name']));
       echo $this->Form->hidden('config', array('value' => $options['config']));
       echo $this->Form->hidden('fallback', array('value' => true));
-      echo $this->Form->submit(__('Vote', true),
+      echo $this->Form->submit('Vote'),
                          array('div' => false,
-                               'title' => __('Vote', true)));
+                               'title' => 'Vote'));
       
       echo $this->Form->end();
     }

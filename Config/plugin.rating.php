@@ -38,7 +38,7 @@ $config['Rating.flash'] = false;
  * 
  * (depends on 'Rating.flash')
  */
-$config['Rating.flashMessage'] = __('Your rating has been saved.', true);
+$config['Rating.flashMessage'] = 'Your rating has been saved.';
 
 /**
  * Enable fallback for disabled javascript.
@@ -159,7 +159,7 @@ $config['Rating.showUserRatingMark'] = true;
  * %VOTES% Number of votes
  * %RATING% User rating
  */
-$config['Rating.statusText'] = __( '%VOTES% voto(s)');
+$config['Rating.statusText'] =  '%VOTES% voto(s)';
 
 /**
  * Show 'Rating.mouseOverMessages' on mouseover.

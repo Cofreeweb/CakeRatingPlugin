@@ -212,7 +212,7 @@ class RatingHelper extends AppHelper
         'model' => $model,
         'options' => $optionsData,
         'data' => array(
-            '%VOTES%' => $votes.' '.__n('', '', $votes, true),
+            '%VOTES%' => $votes,
             '%RATING%' => $userRating, 
             '%AVG%' => $avgRating,
             '%MAX%' => Configure::read('Rating.maxRating')
